@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/master.css">
-    <script src="js/jquery-2.2.0.min.js" charset="utf-8"></script>
-    <script src="js/master.js" charset="utf-8"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/master.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/master.js"></script>
+    <title>Address book</title>
   </head>
   <body>
     <div class="container">
-      <form>
-        <!-- <div class="form-group"> -->
-          <!-- <label for="firstName">Email address</label> -->
-          <input type="text" class="form-control" id="firstName" placeholder="First Name">
-        <!-- </div> -->
-        <!-- <div class="form-group"> -->
-          <!-- <label for="lastName">Password</label> -->
-          <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-        <!-- </div> -->
-        <button type="button" class="btn btn-default" id="buttonSubmit">Submit</button>
-      <!-- </form> -->
+      <h1>Address book</h1>
 
-      <div class="contact-area">
-        <ul id="contacts">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Add a contact:</h2>
+          <form id="new-contact">
+            <div class="form-group">
+              <label for="new-first-name">First name</label>
+              <input type="text" class="form-control" id="new-first-name">
+            </div>
+            <div class="form-group">
+              <label for="new-last-name">Last name</label>
+              <input type="text" class="form-control" id="new-last-name">
+            </div>
 
-        </ul>
-      </div>
-      <div class="show-contacts">
-        <h3></h3>
-        <ul id="contact-list">
+            <button type="submit" class="btn">Add</button>
+          </form>
 
-        </ul>
-      </div>
+          <h2>Contacts:</h2>
+          <ul id="contacts">
 
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div id="show-contact">
+            <h2></h2>
+
+            <p>First name: <span class="first-name"></span></p>
+            <p>Last name: <span class="last-name"></span></p>
+          </div>
+        </div>
       </div>
     </div>
   </body>
